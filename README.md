@@ -25,3 +25,9 @@ Moreover, this project also shows you the performance of several algorithms:
 - Bidirectional A Star Search
 
 - Iterative Deepening A Star Search
+
+This project is based on python, and you should install pygame module and numpy module beforehand.
+
+To run this project, you can input the following content in your commander:
+
+python main.py

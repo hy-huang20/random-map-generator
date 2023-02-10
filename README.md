@@ -29,7 +29,7 @@ Moreover, this project also shows you the performance of several algorithms:
 This project is based on python, and you should install pygame module and numpy module beforehand.
 
 ```
-pip install -r requirement.txt
+pip install -r requirements.txt
 ```
 
 To run this project, you can input the following content in your commander:

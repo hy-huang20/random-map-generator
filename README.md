@@ -52,10 +52,10 @@ If you want to reset them, you can change the value of WIDTH(=700) Literal in ma
 
 Here are several examples:
 
+Bidirectional Breadth First Search
+
 ![Bidirectional Breadth First Search](/images/Bidirectional-Breadth-First-Search.png)
 
-<center>Bidirectional Breadth First Search</center>
+A Star Search
 
 ![A Star Search](/images/A-Star-Search.png)
-
-<center>A Star Search</center>

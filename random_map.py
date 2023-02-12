@@ -82,7 +82,8 @@ class RandomMap:
         self.id_a_star_initialized = False
         self.id_a_star_open = None
         self.id_a_star_closed = None
-        self.id_a_star_depth = 0
+        self.id_a_star_f_limit = 0
+        self.id_a_star_new_f_limit = float('inf')
 
     def initialize(self) -> (None):
         # 随机选择一个起始节点
@@ -1014,9 +1015,13 @@ class RandomMap:
         if node != self.start_node and node != self.end_node:
             self.tmp_map[node.pos[0]][node.pos[1]] = MAP_YELLOW
 
-        node_depth = len(node.path(self.start_node))
+        node_f = len(node.path(self.start_node)) + \
+                    abs(node.pos[0] - self.end_node.pos[0]) + \
+                    abs(node.pos[1] - self.end_node.pos[1])
 
-        if node_depth > self.id_a_star_depth:
+        if node_f > self.id_a_star_f_limit:
+            if node_f < self.id_a_star_new_f_limit:
+                self.id_a_star_new_f_limit = node_f
             self.tmp_map[node.pos[0]][node.pos[1]] = MAP_BLUE
             return False
         
@@ -1052,7 +1057,8 @@ class RandomMap:
             if self.end_node.prev is not None:
                 return True
 
-            self.id_a_star_depth += 1
+            self.id_a_star_f_limit = self.id_a_star_new_f_limit
+            self.id_a_star_new_f_limit = float('inf')
             self.set_tmp_map()
             self.start_node.f = abs(self.start_node.pos[0] - self.end_node.pos[0]) + \
                                 abs(self.start_node.pos[1] - self.end_node.pos[1])

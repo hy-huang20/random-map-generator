@@ -37,3 +37,5 @@ To run this project, you can input the following content in your commander:
 ```
 python main.py
 ```
+
+The width/height of this generated map has both been set to 700, and the scale of each one rectangle has been set to 700 // 50 = 14. If you want to reset it, you can change the value of WIDTH(=700) Literal in main.py, HEIGHT(=700) Literal in main.py, and MAP_SIZE(=50) in random_map.py.

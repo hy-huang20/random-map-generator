@@ -142,8 +142,7 @@ class Game:
             self.random_map.set_tmp_map()
     
     def find_path(self) -> (None):
-        #self.state = FIND_PATH_BY_BFS
-        self.state = FIND_PATH_BY_ID_A_STAR
+        self.state = FIND_PATH_BY_BFS
 
     def find_path_by_bfs(self) -> (None):
         pygame.display.set_caption(self.caption + ' - Breadth First Search')

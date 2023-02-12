@@ -49,3 +49,13 @@ rectangle_scale = WIDTH // MAP_SIZE
 ```
 
 If you want to reset them, you can change the value of WIDTH(=700) Literal in main.py, HEIGHT(=700) Literal in main.py, and MAP_SIZE(=50) Literal in random_map.py. You should always keep them as integers.
+
+Here are several examples:
+
+![Bidirectional Breadth First Search](/images/Bidirectional-Breadth-First-Search.png)
+
+<center>Bidirectional Breadth First Search</center>
+
+![A Star Search](/images/A-Star-Search.png)
+
+<center>A Star Search</center>
